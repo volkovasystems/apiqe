@@ -1,0 +1,31 @@
+{
+  "name": "apiqe",
+  "version": "0.0.0",
+  "description": "Append unique array elements.",
+  "main": "apiqe.deploy.js",
+  "support": "apiqe.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "append",
+    "unique",
+    "array",
+    "element",
+    "apiqe"
+  ],
+  "homepage": "https://github.com/volkovasystems/apiqe",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "eqe": "^0.2.0",
+    "doubt": "^0.26.0",
+    "een": "^0.18.0"
+  }
+}
