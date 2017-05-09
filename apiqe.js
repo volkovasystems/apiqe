@@ -49,33 +49,49 @@
 
 	@include:
 		{
-			"eqe": "eqe",
 			"doubt": "doubt",
-			"een": "een"
+			"een": "een",
+			"eqe": "eqe",
+			"falzy": "falzy",
+			"raze": "raze"
 		}
 	@end-include
 */
 
-const eqe = require( "eqe" );
 const doubt = require( "doubt" );
 const een = require( "een" );
+const eqe = require( "eqe" );
+const falzy = require( "falzy" );
+const raze = require( "raze" );
 
 const apiqe = function apiqe( target, source ){
 	/*;
 		@meta-configuration:
 			{
-				"target:required": Array,
-				"source:required": Array
+				"target:required": "[*]",
+				"source:required": "[*]"
 			}
 		@end-meta-configuration
 	*/
 
+	if( doubt( target, ARRAY ) && falzy( source ) ){
+		return target;
+	}
+
+	if( doubt( source, ARRAY ) && falzy( target ) ){
+		return raze( source );
+	}
+
+	if( falzy( target ) && falzy( source ) ){
+		throw new Error( "invalid target and source" );
+	}
+
 	if( !doubt( target, ARRAY ) ){
-		throw new Error( "invalid target array" );
+		target = [ target ];
 	}
 
 	if( !doubt( source, ARRAY ) ){
-		throw new Error( "invalid source array" );
+		source = [ source ];
 	}
 
 	source.forEach( ( value ) => {

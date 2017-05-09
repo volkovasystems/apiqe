@@ -1,8 +1,10 @@
 yarn add \
 babel-runtime \
-eqe \
 doubt \
 een \
+eqe \
+falzy \
+raze \
 --save && \
 yarn add \
 babel-cli \
@@ -13,8 +15,10 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-eqe \
 doubt \
 een \
+eqe \
+falzy \
+raze \
 --save \
 --force-latest
