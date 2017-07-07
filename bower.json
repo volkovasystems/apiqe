@@ -1,12 +1,13 @@
 {
   "name": "apiqe",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Append unique array elements.",
   "main": "apiqe.deploy.js",
   "support": "apiqe.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -25,10 +26,10 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.27.0",
-    "een": "^0.19.0",
+    "doubt": "^0.29.0",
+    "een": "^0.20.0",
     "eqe": "^0.3.0",
     "falzy": "^0.20.0",
-    "raze": "^0.30.0"
+    "raze": "^0.32.0"
   }
 }
