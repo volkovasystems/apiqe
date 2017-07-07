@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>apiqe unit test</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Apiqe QUnit Example</title>
-	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
-	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-	<script type="application/javascript" src="./apiqe.deploy.js"></script>
-</head>
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
 
-<body>
-	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-	<script>
-		QUnit.test( "equal test", function( assert ) {
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
 
-			assert.deepEqual( apiqe( [ 1, 2 ,3 ], [ 4, 5, 6, 1, 2, 3 ] ), [ 1, 2, 3, 4, 5, 6 ], "should be equal to [ 1, 2, 3, 4, 5, 6 ]" );
+		<script type="application/javascript" src="./apiqe.deploy.js"></script>
+	</head>
 
-			assert.deepEqual( apiqe( "hello", "world" ), [ "hello", "world" ], "should be equal to [ 'hello', 'world' ]" );
+	<body>
+		<div id="qunit"></div>
 
-			let test1 = apiqe( [ Array, Object ], [ Array, Object, Object, Date, RegExp ] );
-			assert.deepEqual( test1, [ Array, Object, Date, RegExp ], "should be deeply equal" );
+		<div id="qunit-fixture"></div>
 
-		} );
-	</script>
-</body>
+		<script type="application/javascript">
+			QUnit.test( "apiqe unit test", function( assert ) {
 
+				assert.deepEqual( apiqe( [ 1, 2 ,3 ], [ 4, 5, 6, 1, 2, 3 ] ),
+					[ 1, 2, 3, 4, 5, 6 ], "should be equal to [ 1, 2, 3, 4, 5, 6 ]" );
+
+				assert.deepEqual( apiqe( "hello", "world" ), [ "hello", "world" ],
+					"should be equal to [ 'hello', 'world' ]" );
+					
+			} );
+		</script>
+	</body>
 </html>
