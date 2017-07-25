@@ -53,19 +53,13 @@
 
 	@include:
 		{
-			"doubt": "doubt",
 			"een": "een",
-			"eqe": "eqe",
-			"falzy": "falzy",
 			"raze": "raze"
 		}
 	@end-include
 */
 
-const doubt = require( "doubt" );
 const een = require( "een" );
-const eqe = require( "eqe" );
-const falzy = require( "falzy" );
 const raze = require( "raze" );
 
 const apiqe = function apiqe( target, source ){
@@ -78,29 +72,14 @@ const apiqe = function apiqe( target, source ){
 		@end-meta-configuration
 	*/
 
-	if( doubt( target, ARRAY ) && falzy( source ) ){
-		return target;
-	}
+	target = raze( target );
+	source = raze( source ).reverse( );
 
-	if( doubt( source, ARRAY ) && falzy( target ) ){
-		return raze( source );
+	let index = source.length;
+	while( index-- ){
+		let value = source[ index ];
+		!een( target, value ) && target.push( value );
 	}
-
-	if( falzy( target ) && falzy( source ) ){
-		throw new Error( "invalid target and source" );
-	}
-
-	if( !doubt( target, ARRAY ) ){
-		target = [ target ];
-	}
-
-	if( !doubt( source, ARRAY ) ){
-		source = [ source ];
-	}
-
-	source.forEach( ( value ) => {
-		!een( target, value, ( element, value ) => eqe( element, value ) ) && target.push( value );
-	} );
 
 	return target;
 };

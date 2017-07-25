@@ -53,19 +53,13 @@
               
               	@include:
               		{
-              			"doubt": "doubt",
               			"een": "een",
-              			"eqe": "eqe",
-              			"falzy": "falzy",
               			"raze": "raze"
               		}
               	@end-include
               */
 
-var doubt = require("doubt");
 var een = require("een");
-var eqe = require("eqe");
-var falzy = require("falzy");
 var raze = require("raze");
 
 var apiqe = function apiqe(target, source) {
@@ -78,29 +72,14 @@ var apiqe = function apiqe(target, source) {
                                             	@end-meta-configuration
                                             */
 
-	if (doubt(target, ARRAY) && falzy(source)) {
-		return target;
-	}
+	target = raze(target);
+	source = raze(source).reverse();
 
-	if (doubt(source, ARRAY) && falzy(target)) {
-		return raze(source);
+	var index = source.length;
+	while (index--) {
+		var value = source[index];
+		!een(target, value) && target.push(value);
 	}
-
-	if (falzy(target) && falzy(source)) {
-		throw new Error("invalid target and source");
-	}
-
-	if (!doubt(target, ARRAY)) {
-		target = [target];
-	}
-
-	if (!doubt(source, ARRAY)) {
-		source = [source];
-	}
-
-	source.forEach(function (value) {
-		!een(target, value, function (element, value) {return eqe(element, value);}) && target.push(value);
-	});
 
 	return target;
 };
