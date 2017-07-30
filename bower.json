@@ -1,32 +1,32 @@
 {
-	"name": "apiqe",
-	"version": "0.8.0",
-	"description": "Append unique array elements.",
-	"main": "apiqe.deploy.js",
-	"support": "apiqe.support.js",
-	"authors": [
-		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-		"Vinse Vinalon <vinsevinalon@gmail.com>"
-	],
-	"license": "MIT",
-	"keywords": [
-		"append",
-		"unique",
-		"array",
-		"element",
-		"apiqe"
-	],
-	"homepage": "https://github.com/volkovasystems/apiqe",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
-	"dependencies": {
-		"een": "^0.23.0",
-		"raze": "^0.34.0"
-	}
+  "name": "apiqe",
+  "version": "0.8.0",
+  "description": "Append unique array elements.",
+  "main": "apiqe.deploy.js",
+  "support": "apiqe.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "append",
+    "unique",
+    "array",
+    "element",
+    "apiqe"
+  ],
+  "homepage": "https://github.com/volkovasystems/apiqe",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "een": "^0.23.0",
+    "raze": "^0.34.0"
+  }
 }
