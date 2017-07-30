@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-07-30T06:09:21.736Z",
+	"end": "2017-07-30T06:10:37.616Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "apiqe",
+			"duration": 0,
+			"start": "2017-07-30T06:10:37.292Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "apiqe",
+			"duration": 142,
+			"start": "2017-07-30T06:10:37.293Z",
+			"end": "2017-07-30T06:10:37.435Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-07-30T06:10:37.297Z",
+					"end": "2017-07-30T06:10:37.298Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "apiqe",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5, 6 ]"
+				},
+				{
+					"start": "2017-07-30T06:10:37.396Z",
+					"end": "2017-07-30T06:10:37.396Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "apiqe",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5, 6 ]"
+				},
+				{
+					"start": "2017-07-30T06:10:37.397Z",
+					"end": "2017-07-30T06:10:37.397Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "apiqe",
+					"associatedTest": "should be equal to [ 'hello', 'world' ]"
+				},
+				{
+					"start": "2017-07-30T06:10:37.435Z",
+					"end": "2017-07-30T06:10:37.435Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "apiqe",
+					"associatedTest": "should be equal to [ 'hello', 'world' ]"
+				},
+				{
+					"start": "2017-07-30T06:10:37.435Z",
+					"end": "2017-07-30T06:10:37.436Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "apiqe"
+				}
+			]
+		},
+		{
+			"name": "`apiqe( [ 1, 2 ,3 ], [ 4, 5, 6, 1, 2, 3 ] )`",
+			"duration": 101,
+			"start": "2017-07-30T06:10:37.295Z",
+			"end": "2017-07-30T06:10:37.396Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, 5, 6 ]",
+					"start": "2017-07-30T06:10:37.296Z",
+					"end": "2017-07-30T06:10:37.385Z",
+					"duration": 89,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`apiqe( 'hello', 'world' )`",
+			"duration": 39,
+			"start": "2017-07-30T06:10:37.396Z",
+			"end": "2017-07-30T06:10:37.435Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hello', 'world' ]",
+					"start": "2017-07-30T06:10:37.397Z",
+					"end": "2017-07-30T06:10:37.435Z",
+					"duration": 38,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
