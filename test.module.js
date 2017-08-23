@@ -85,7 +85,9 @@ describe( "apiqe", ( ) => {
 
 	describe( "`apiqe( 'hello', 'world' )`", ( ) => {
 		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+
 			assert.deepEqual( apiqe( "hello", "world" ), [ "hello", "world" ] );
+
 		} );
 	} );
 
@@ -108,7 +110,9 @@ describe( "apiqe", ( ) => {
 
 	describe( "`apiqe( 'hello', 'world' )`", ( ) => {
 		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+
 			assert.deepEqual( apiqe( "hello", "world" ), [ "hello", "world" ] );
+
 		} );
 	} );
 
@@ -120,22 +124,25 @@ describe( "apiqe", ( ) => {
 
 describe( "apiqe", ( ) => {
 
-	const testBridge = path.resolve(__dirname, "bridge.html");
-	const bridgeURL = "file://" + testBridge;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
 	describe( "`apiqe( [ 1, 2 ,3 ], [ 4, 5, 6, 1, 2, 3 ] )`", ( ) => {
 		it( "should be equal to [ 1, 2, 3, 4, 5, 6 ]", ( ) => {
-
-			let result = browser.url( bridgeURL ).execute( ( ) => apiqe( [ 1, 2 ,3 ], [ 4, 5, 6, 1, 2, 3 ] ) );
-			assert.deepEqual( result.value, [ 1, 2, 3, 4, 5, 6 ] );
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute( ( ) => JSON.stringify( apiqe( [ 1, 2 ,3 ], [ 4, 5, 6, 1, 2, 3 ] ) ) );
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result.value ), [ 1, 2, 3, 4, 5, 6 ] );
 
 		} );
 	} );
 
 	describe( "`apiqe( 'hello', 'world' )`", ( ) => {
 		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
-			let result = browser.url( bridgeURL ).execute( ( ) => apiqe( "hello", "world" ) );
-			assert.deepEqual( result.value, [ "hello", "world" ] );
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute( ( ) => JSON.stringify( apiqe( "hello", "world" ) ) );
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result.value ), [ "hello", "world" ] );
+
 		} );
 	} );
 

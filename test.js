@@ -81,7 +81,9 @@ describe( "apiqe", ( ) => {
 
 	describe( "`apiqe( 'hello', 'world' )`", ( ) => {
 		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+
 			assert.deepEqual( apiqe( "hello", "world" ), [ "hello", "world" ] );
+
 		} );
 	} );
 
